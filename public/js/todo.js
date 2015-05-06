@@ -1,0 +1,26 @@
+'use strict';
+
+var React = require('react/addons');
+
+var TodoApp = React.createClass({
+  displayName: 'TodoApp',
+
+  componentDidMount: function componentDidMount() {
+    console.log('component mounted');
+  },
+
+  render: function render() {
+
+    return React.createElement(
+      'div',
+      null,
+      'Maneesh'
+    );
+  }
+
+});
+
+/* Module.exports instead of normal dom mounting */
+module.exports.todoApp = TodoApp;
+/* Normal mounting happens inside of /main.js and is bundled with browerify */
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRvZG8uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxJQUFJLEtBQUssR0FBRyxPQUFPLENBQUMsY0FBYyxDQUFDLENBQUM7O0FBRXBDLElBQUksT0FBTyxHQUFHLEtBQUssQ0FBQyxXQUFXLENBQUM7OztBQUUxQixtQkFBaUIsRUFBRSw2QkFBWTtBQUM3QixXQUFPLENBQUMsR0FBRyxDQUFDLG1CQUFtQixDQUFDLENBQUM7R0FFbEM7O0FBRUQsUUFBTSxFQUFFLGtCQUFZOztBQUVsQixXQUNFOzs7O0tBRU0sQ0FDUDtHQUNGOztDQUVKLENBQUMsQ0FBQzs7O0FBR0wsTUFBTSxDQUFDLE9BQU8sQ0FBQyxPQUFPLEdBQUcsT0FBTyxDQUFDIiwiZmlsZSI6InRvZG8uanMiLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgUmVhY3QgPSByZXF1aXJlKCdyZWFjdC9hZGRvbnMnKTtcclxuXHJcbnZhciBUb2RvQXBwID0gUmVhY3QuY3JlYXRlQ2xhc3Moe1xyXG5cclxuICAgICAgY29tcG9uZW50RGlkTW91bnQ6IGZ1bmN0aW9uICgpIHtcclxuICAgICAgICBjb25zb2xlLmxvZygnY29tcG9uZW50IG1vdW50ZWQnKTtcclxuXHJcbiAgICAgIH0sXHJcblxyXG4gICAgICByZW5kZXI6IGZ1bmN0aW9uICgpIHtcclxuXHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgIE1hbmVlc2hcclxuICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgIClcclxuICAgICAgfVxyXG5cclxuICB9KTtcclxuXHJcbi8qIE1vZHVsZS5leHBvcnRzIGluc3RlYWQgb2Ygbm9ybWFsIGRvbSBtb3VudGluZyAqL1xyXG5tb2R1bGUuZXhwb3J0cy50b2RvQXBwID0gVG9kb0FwcDsgIFxyXG4vKiBOb3JtYWwgbW91bnRpbmcgaGFwcGVucyBpbnNpZGUgb2YgL21haW4uanMgYW5kIGlzIGJ1bmRsZWQgd2l0aCBicm93ZXJpZnkgKi8iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=

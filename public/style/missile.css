@@ -1,0 +1,23 @@
+html, body {
+  height: 100%;
+  width: 100%; }
+
+.header {
+  height: 65px;
+  background-color: rgba(128, 32, 65, 0.9);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  color: #fff; }
+
+.header-heading h1 {
+  color: #fff; }
+
+ul.headerMenu {
+  margin-bottom: 0; }
+
+.headerMenu li {
+  font-size: 1.125rem;
+  line-height: 65px;
+  font-family: 'AlternateGothic'; }

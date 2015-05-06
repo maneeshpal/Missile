@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="utf-8">
+
+        {{- defineContent('headScripts') }}
+
+        <link rel="stylesheet" type="text/css" href="/style/lib/foundation/foundation.css" />
+        <link rel="stylesheet" type="text/css" href="/style/missile.css" />
+
+        {{- defineContent('styles') }}
+    </head>
+    <body>
+        {{ include templates/header }}
+        <div style="margin-top: 65px"></div>
+        {{- body }}
+        
+        <script type="text/javascript" src="/js/lib/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/js/utils.js"></script>
+        {{- defineContent('scripts') }}
+    </body>
+</html>
