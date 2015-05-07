@@ -6,15 +6,13 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
-    scss: ('static/style/**/*.scss'),
-    js: ('static/js/src/**/*.js'),
-    libJs: ('static/js/lib/**/*.js'),
-    jsServer: 'static/js/server/**/*.js',
+    scss: 'static/style/**/*.scss',
+    js: 'static/js/src/**/*.js',
+    libJs: 'static/js/lib/**/*.js',
     build: {
         js: 'public/js/',
         css: 'public/style/',
-        jsLib: 'public/js/lib/',
-        jsServer: 'static/js/build/'
+        jsLib: 'public/js/lib/'
     }
 };
 
