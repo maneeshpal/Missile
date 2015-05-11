@@ -21,7 +21,7 @@ app.use(layouts);
 app.use(compression());
 
 app.get('/', function (req, res) {
-	var reactHtml = React.renderToString(todoApp({}));
+	var reactHtml = React.renderToString(todoApp({data: ['server1', 'server2']}));
  	res.render('index', {reactHtml: reactHtml});
 });
 

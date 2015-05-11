@@ -5,7 +5,6 @@ var isNode = typeof module !== 'undefined'
   && typeof window === 'undefined';
 var React = isNode ? require('react/addons') : window.React;
 
-
 var TodoItem = React.createClass({
   render: function() {
     
@@ -21,8 +20,7 @@ var TodoList = React.createClass({
   render: function() {
     var todoNodes = this.props.data.map(function (comment) {
       return (
-        <TodoItem todo={comment}>
-        </TodoItem>
+        <TodoItem todo={comment}/>
       );
     });
     return (
@@ -34,16 +32,31 @@ var TodoList = React.createClass({
 });
 
 var TodoApp = React.createClass({
-    componentDidMount: function () {
-      console.log('component mounted');
-    },
-    render: function () {
-      return (
-        <h4>Todo App heading</h4>
-        <TodoList data = {this.props.data} />
-      )
-    }
-  });
+  getInitialState: function() {
+    return {text:''};
+  },
+  componentDidMount: function () {
+    console.log('component mounted');
+  },
+  addTodo: function(e) {
+     e.preventDefault();
+    this.props.data.push(this.state.text);
+    this.setState({'text':''});
+  },
+  onChange: function(e) {
+    this.setState({text: e.target.value});
+  },
+  render: function () {
+    return (
+      <div>
+        <h4>Todo App heading {this.props.data.join('-')}</h4>
+        <TodoList data={this.props.data} />
+        <input type="text" value={this.state.text} onChange={this.onChange}></input>
+        <button onClick={this.addTodo}>add todo</button>
+      </div>
+    );
+  }
+});
 
 if(isNode) {
   module.exports.todoApp = TodoApp;
@@ -51,5 +64,5 @@ if(isNode) {
 else {
   var mountNode = document.getElementById("react-main-mount");
   var data = ['item1', 'item2'];
-  React.render(<TodoApp data={data}/>, mountNode); 
+  React.render(<TodoApp data={data}/>, mountNode);
 }
