@@ -43,9 +43,7 @@
 
     const mixins = {
         changeHandler (e) {
-            this.props.value.update(function (currentSearch) {
-                return e.currentTarget.value;
-            });
+            this.props.value.update(() =>  e.currentTarget.value);
         },
         addTodo (e) {
             const newItem = Immutable.fromJS({ item: this.props.data.get('newItemValue') });
@@ -84,10 +82,14 @@
         );
     });
 
-    const About = component('About', function ({ userid }) {
+    const About = component('About',{
+        contextTypes: {
+            router: React.PropTypes.func
+          }
+    }, function ({ userid }) {
         return (
             <div>
-                ABOUT userid is 
+                ABOUT userid is {this.context.router.getCurrentParams().userid}
             </div>
         );
     });
@@ -109,8 +111,7 @@
         });
     };
 
-    const TodoAppWithProps = bindProps(TodoApp, { data: structure.cursor() });
-
+    
     const App = component({
         shouldComponentUpdate () {
             return true;
@@ -118,23 +119,24 @@
     },function () {
         return (
             <div>
-                <Link to="about">About</Link>
+                <Link to="/123">123</Link>
                 <Link to="todo">Todo</Link>
                 <RouteHandler />
             </div>
         );
     });
 
-    const routes = (
-        <Route path="/" handler={App}>
-            <Route name="todo" handler={TodoAppWithProps} />
-            <Route name="about" path=":userid" handler={AboutContainer}/>
-        </Route>
-    );
-
     function render () {
+        const TodoAppWithProps = bindProps(TodoApp, { data: structure.cursor() });
+        const routes = (
+            <Route path="/" handler={App}>
+                <Route name="todo" handler={TodoAppWithProps} />
+                <Route name="about" path=":userid" handler={About}/>
+            </Route>
+        );
+
         Router.run(routes, function (Handler) {
-            React.render(<Handler />, document.getElementById('react-main-mount'));
+            React.render(<Handler data={structure.cursor()}/>, document.getElementById('react-main-mount'));
         });
     }
 
