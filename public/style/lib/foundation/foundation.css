@@ -4547,10 +4547,10 @@ form {
 
 /* Using forms within rows, we need to set some defaults */
 form .row .row {
-  margin: 0 -0.95312rem; }
+  margin: 0 -0.95313rem; }
   form .row .row .column,
   form .row .row .columns {
-    padding: 0 0.95312rem; }
+    padding: 0 0.95313rem; }
   form .row .row.collapse {
     margin: 0; }
     form .row .row.collapse .column,
@@ -4566,7 +4566,7 @@ form .row input.column,
 form .row input.columns,
 form .row textarea.column,
 form .row textarea.columns {
-  padding-left: 0.95312rem; }
+  padding-left: 0.95313rem; }
 
 /* Label Styles */
 label {
@@ -4583,7 +4583,7 @@ label {
     text-align: right; }
   label.inline {
     margin: 0 0 1.90625rem 0;
-    padding: 1.01562rem 0; }
+    padding: 1.01563rem 0; }
   label small {
     text-transform: capitalize;
     color: #676767; }
@@ -4693,7 +4693,7 @@ textarea {
   display: block;
   font-size: 1.125rem;
   margin: 0 0 1.90625rem 0;
-  padding: 0.95312rem;
+  padding: 0.95313rem;
   height: 3.92188rem;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -4903,7 +4903,7 @@ select {
   border-style: solid;
   border-width: 1px;
   border-color: #cccccc;
-  padding: 0.95312rem;
+  padding: 0.95313rem;
   font-size: 1.125rem;
   font-family: "SourceSans", Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   color: rgba(0, 0, 0, 0.75);
@@ -4931,7 +4931,7 @@ select {
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: inline-block;
-  margin-left: 0.95312rem;
+  margin-left: 0.95313rem;
   margin-right: 1.90625rem;
   margin-bottom: 0;
   vertical-align: baseline; }
@@ -11280,10 +11280,10 @@ form {
 
 /* Using forms within rows, we need to set some defaults */
 form .row .row {
-  margin: 0 -0.95312rem; }
+  margin: 0 -0.95313rem; }
   form .row .row .column,
   form .row .row .columns {
-    padding: 0 0.95312rem; }
+    padding: 0 0.95313rem; }
   form .row .row.collapse {
     margin: 0; }
     form .row .row.collapse .column,
@@ -11299,7 +11299,7 @@ form .row input.column,
 form .row input.columns,
 form .row textarea.column,
 form .row textarea.columns {
-  padding-left: 0.95312rem; }
+  padding-left: 0.95313rem; }
 
 /* Label Styles */
 label {
@@ -11316,7 +11316,7 @@ label {
     text-align: right; }
   label.inline {
     margin: 0 0 1.90625rem 0;
-    padding: 1.01562rem 0; }
+    padding: 1.01563rem 0; }
   label small {
     text-transform: capitalize;
     color: #676767; }
@@ -11426,7 +11426,7 @@ textarea {
   display: block;
   font-size: 1.125rem;
   margin: 0 0 1.90625rem 0;
-  padding: 0.95312rem;
+  padding: 0.95313rem;
   height: 3.92188rem;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -11636,7 +11636,7 @@ select {
   border-style: solid;
   border-width: 1px;
   border-color: #cccccc;
-  padding: 0.95312rem;
+  padding: 0.95313rem;
   font-size: 1.125rem;
   font-family: "SourceSans", Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   color: rgba(0, 0, 0, 0.75);
@@ -11664,7 +11664,7 @@ select {
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: inline-block;
-  margin-left: 0.95312rem;
+  margin-left: 0.95313rem;
   margin-right: 1.90625rem;
   margin-bottom: 0;
   vertical-align: baseline; }
@@ -11808,8 +11808,8 @@ meta.foundation-mq-topbar {
     padding-bottom: .35rem;
     font-size: 0.75rem; }
   .top-bar .button, .top-bar button {
-    padding-top: .4125rem;
-    padding-bottom: .4125rem;
+    padding-top: 0.4125rem;
+    padding-bottom: 0.4125rem;
     margin-bottom: 0;
     font-size: 0.75rem; }
     @media only screen and (max-width: 40em) {
