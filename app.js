@@ -25,6 +25,10 @@ app.get('/', function (req, res) {
  	res.render('index', {reactHtml: reactHtml});
 });
 
+app.get('/omni', function (req, res) {
+	res.render('omni');
+});
+
 var server = app.listen(port, function () {
     console.log('Missile launched http://%s:%s', server.address().address, server.address().port);
 });
