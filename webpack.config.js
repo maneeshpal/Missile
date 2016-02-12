@@ -1,9 +1,7 @@
 
 var path = require('path');
 module.exports = {
-    entry: {
-        routerTest: './static/js/src/todo.omni.js'
-    },
+    entry: { promisetest: './static/js/src/promisetest.js', dropdown: './static/js/src/dropdown.js'},
 
     output: {
         path: __dirname + '/public/js',
@@ -17,7 +15,11 @@ module.exports = {
                 loader: 'babel-loader',
                 include: [
                     path.resolve(__dirname, './static/js/src')
-                ]
+                ],
+                query: {
+                    plugins: ['transform-runtime'],
+                    presets: ['es2015','stage-0', 'react'],
+                }
             }
         ]
     }

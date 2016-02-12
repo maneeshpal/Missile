@@ -29,6 +29,14 @@ app.get('/omni', function (req, res) {
 	res.render('omni');
 });
 
+app.get('/dropdowntest', function (req, res) {
+	res.render('dropdowntest');
+});
+
+app.get('/promisetest', function (req, res) {
+	res.render('promisetest');
+});
+
 var server = app.listen(port, function () {
     console.log('Missile launched http://%s:%s', server.address().address, server.address().port);
 });
