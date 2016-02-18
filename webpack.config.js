@@ -1,7 +1,11 @@
 
 var path = require('path');
 module.exports = {
-    entry: { promisetest: './static/js/src/promisetest.js', dropdown: './static/js/src/dropdown.js'},
+    entry: { 
+        promisetest: './static/js/src/promisetest.js', 
+        dropdown: './static/js/src/dropdown.js',
+        routertest: './static/js/src/routertest.js'
+    },
 
     output: {
         path: __dirname + '/public/js',

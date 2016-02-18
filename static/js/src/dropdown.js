@@ -1,10 +1,9 @@
 
 import React from 'react';
+import ReactDom from 'react-dom';
 import immstruct from 'immstruct';
 import Immutable from 'immutable';
 import omniscient from 'omniscient';
-import Router from 'react-router';
-const { Route, RouteHandler, Link } = Router;
 
 const { PropTypes, cloneElement } = React;
 
@@ -110,7 +109,7 @@ const UserActionsDropDown = component({
     } 
 }, function ({ userActions }) {
     let items = userActions.toList().map((option) =>
-        <StaticOption>
+        <StaticOption key={option.get('label')}>
             <a href={option.get('href')}>
                 {option.get('label')}
             </a>
@@ -181,22 +180,35 @@ const CounterIncrementor = component({
     );
 });
 
-const App = component(function ({ data }) {
+const App = component({
+    getInitialState () {
+        return {
+            cursor: structure.cursor()
+        }
+    },
 
+    componentWillMount () {
+        structure.on('swap', this.onSwap);
+    },
+
+    componentWillUnmount () {
+        structure.off('swap', this.onSwap);
+    },
+    
+    onSwap (oldSt, newSt, keyPath) {
+        this.setState({ cursor: structure.cursor() });
+    }
+
+}, function ({ data }) {
     return (
         <div>
             <h4>events bubble</h4>
-            <UserActionsDropDown userActions={data.cursor('items')} />
+            <UserActionsDropDown userActions={this.state.cursor.cursor('items')} />
             <h4>callback example</h4>
             <CounterIncrementor />
         </div>
     );
 });
 
-function render () {
-    React.render(<App data={structure.cursor()}/>, document.getElementById('react-main-mount'));
-}
 
-render();
-
-structure.on('swap', render);
+ReactDom.render(<App />, document.getElementById('react-main-mount'));

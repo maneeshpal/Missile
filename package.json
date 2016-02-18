@@ -12,12 +12,15 @@
     "ejs": "^1.0.0",
     "express": "~4.10.3",
     "express-ejs-layouts": "^1.1.0",
+    "history": "^2.0.0",
     "immstruct": "^2.0.0",
     "immutable": "^3.7.5",
     "omniscient": "^3.3.0",
     "q": "^1.4.1",
-    "react": "~0.13.2",
-    "react-router": "^0.13.3",
+    "react": "^0.14.7",
+    "react-addons-css-transition-group": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-router": "^2.0.0",
     "webpack": "^1.12.9"
   },
   "devDependencies": {

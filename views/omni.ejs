@@ -1,13 +1,87 @@
 
 <div class="row">
     <div class="small-12 columns">
-        <h1>Omni</h1>
+        <h1>react css animation between routes</h1>
         <div id="react-main-mount"></div>
     </div>
 </div
 
 
 
+{{- contentFor('styles') }}
+<style>
+	.app {
+		position: relative;
+	}
+	.container {
+		height: 200px;
+		width: 100%;
+	}
+
+	.le {
+		background-color: #e3e3e3;
+		border: 2px solid #00f;
+	}
+
+	.ri {
+		background-color: #f00;
+		border: 2px solid #000;
+	}
+
+	.slider-leave {
+		left: 0;
+	  	position: absolute;
+	}
+
+	.le.slider-leave.slider-leave-active {
+		left:-100%;
+	}
+
+	.ri.slider-leave.slider-leave-active {
+		left:100%;
+	}
+
+	.slider-leave.slider-leave-active {
+	  	transition: left 500ms ease-in;
+	}
+
+	.slider-enter {
+	  	position: absolute;
+		transition: left 500ms ease-in;
+	}
+
+	.le.slider-enter {
+		left:-100%;
+	}
+
+	.ri.slider-enter {
+		left:100%;
+	}
+
+	.slider-enter.slider-enter-active {
+	  	left:0;
+	}
+/*
+	.slider-appear {
+	  	position: absolute;
+		transition: left 500ms ease-in;
+	}
+
+	.le.slider-appear {
+		left:100%;
+	}
+
+	.ri.slider-appear {
+		left:-100%;
+	}
+
+	.slider-appear.slider-appear-active {
+	  	left:0;
+	}
+*/
+</style>
+
 {{- contentFor('scripts') }}
 
 <script type="text/javascript" src="/js/routertest.js"></script>
+
